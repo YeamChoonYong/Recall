@@ -3,22 +3,86 @@
     margin: 0;
     padding: 0;
     color: white;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family: 'Joystix', 'Arial Narrow', Arial, sans-serif;
 }
 
-p {
-    font-size: 24px;
+html {
+    scroll-behavior: smooth;
+}
+
+.loginForm {
+    border: 10px solid gray;
+    background-color: rgb(3, 0, 64);
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    height: 500px;
+}
+
+.frame {
+    border: rgb(70, 70, 70) 5px solid;
+    background-color: gray;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 60%;
+    margin: auto;
+}
+
+.submitButton {
+    background-color: black;
+    color: white;
+    border: rgb(255, 255, 255) 2px solid;
+    border-radius: 5px;
+    padding: 5px;
+    margin: 5px;
+}
+
+input {
+    color: black;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+    height: 0px;
+}
+
+::-webkit-scrollbar-track {
+    background: rgb(1, 0, 80);
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgba(75, 96, 255, 0.453);
+    border-radius: 100vw;
+}
+
+@font-face {
+    font-family: Joystix;
+    src: url('Assets/fonts/joystix.monospace-regular.otf');
+}
+
+h1, h2 {
+    font-weight: bold;
 }
 
 #banner {
     background-color: black;
     width: 100%;
-    height: 150px;
+    height: 212.5px;
     text-align: center;
+}
+
+#gameLogo {
+    max-width: 300px; 
+    max-height: 300px;
 }
 
 body {
     background-color: black;
+    overflow-x: hidden;
 }
 
 .navbar {
@@ -27,7 +91,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 1.2rem;
+    font-size: 2rem;
     position: sticky;
     top: 0;
     z-index: 999;
@@ -72,6 +136,7 @@ body {
 
 .navbarItem {
     height: 80px;
+    margin: 0 20px;
 }
 
 .navbarLinks {
@@ -89,7 +154,16 @@ body {
     justify-content: center;
     align-items: center;
     padding: 0 1rem;
+    width: 250%;
+}
+
+.navbarBtn2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 0.5rem;
     width: 100%;
+    height: 30px;
 }
 
 .button {
@@ -105,6 +179,7 @@ body {
     border-radius: 4px;
     background: black;
     color: white;
+    border-radius: 10px;
 }
 
 .button:hover {
@@ -115,7 +190,7 @@ body {
 } 
 
 .navbarLinks:hover {
-    color: #f77062;
+    color: rgb(100, 100, 255);
     transition: all 0.3s ease;
     text-decoration: none;
 }
@@ -126,7 +201,81 @@ body {
     margin: auto;
 }
 
-@media screen and (max-width: 960px) {
+#accountName {
+    display: flex;
+    justify-content: end;
+}
+
+.newTopic {
+    margin-top: 20px;
+}
+
+br {
+    height: 5px;
+}
+
+hr {
+    height: 5px;
+    border-width: 5px;
+    color: white;
+    background-color: white;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.main {
+    background-color: black;
+}
+
+.mainContainer {
+    text-align: center;
+    padding: 15px;
+}
+
+.whatIsRecall {
+    display: inline;
+}
+
+.showcaseImages {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.showcaseImage {
+    width: 50%;
+    padding: 5px;
+    margin: 10px 0;
+}
+
+.showcaseImages::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+
+.footerContainer {
+    background-color: rgb(0, 0, 70);
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    font-size: 2rem;
+}
+
+
+.footerContent span {
+    padding: 20px;
+    text-decoration: none;
+    color: #ffffff;
+}
+
+a:visited {
+    color: white;
+}
+
+@media screen and (max-width: 600px) {
+
     .navbarContainer {
         display: flex;
         justify-content: space-between;
@@ -148,14 +297,16 @@ body {
         transition: all 0.5s ease;
         height: 50vh;
         z-index: -1;
+        right: 1px;
     }
 
     .navbarMenu.active {
-        background: #131313;
+        background: rgb(0, 58, 106);
         top: 100%;
         opacity: 1;
         transition: all 0.5s ease;
         z-index: 99;
+        right: 1px;
         height: 50vh;
         font-size: 1.6rem;
     }
@@ -192,6 +343,7 @@ body {
 
     .navbarBtn {
         padding-bottom: 2rem;
+        width: 100%;
     }
 
     .button {
@@ -201,6 +353,7 @@ body {
         width: 80%;
         height: 80px;
         margin: 0;
+        border-radius: 10px;
     }
 
     .navbarToggle .bar {
@@ -224,39 +377,8 @@ body {
         width: 342px;
         height: 192px;
     }
+
+    .showcaseImage {
+        width: 100%;
+    }
 }
-
-#accountName {
-    display: flex;
-    justify-content: end;
-}
-
-.main {
-    background-color: black;
-}
-
-.mainContainer {
-    text-align: center;
-    padding: 15px;
-}
-
-.footerContainer {
-    background-color: rgb(0, 0, 70);
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    height: 80px;
-    font-size: 2rem;
-}
-
-
-.footerContent span {
-    padding: 20px;
-    text-decoration: none;
-    color: #ffffff;
-}
-
-a:visited {
-    color: white;
-}
-
