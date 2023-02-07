@@ -8,32 +8,35 @@
         <link rel="stylesheet" href="style.css">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
     </head>
-    <body>
-        <header>
-            <div id="banner">
-                <h1>
-                    <img alt="Recall" class="img-responsive" src="/assets/images/logo.png">
-                    <span class="sr-only">RECALL</span>
-                </h1>
-            </div>
-        </header>
+    <body style="background: black;">
         <div class="frame">
             <div class="loginForm">
+                <h1 id="formTitle">Identify Yourself</h1>
+                <h2>User</h2>
                 <form>
-                    <h1>Identify Yourself</h1>
-                    <h2>User</h2>
-                    <br>
-                    <label for="fname">Username:</label><br>
-                    <input type="text" id="username" name="username"><br>
-                    <label for="fname">Password:</label><br>
-                    <input type="password" id="password" name="password"><br><br>
-                    <input type="submit" value="submit" class="submitButton">
+                    <div class="inputGroup">
+                        <div class="inputField" id="nameField">
+                            <label for="fname">Username:</label><br>
+                            <input type="text" id="username" name="username"><br>
+                        </div>
+                        <div class="inputField">
+                            <label for="fname">Email:</label><br>
+                            <input type="text" id="email" name="email"><br>
+                        </div>
+                        <div class="inputField">
+                            <label for="fname">Password:</label><br>
+                            <input type="password" id="password" name="password"><br><br>
+                        </div>
+                        <input type="submit" value="submit" class="submitButton">
+                    </div>
+                    <div class="btnField">
+                        <button type="button" id="signUpBtn" class="disable">Sign Up</button>
+                        <button type="button" id="signInBtn">Sign In</button>
+                    </div>
                 </form>
             </div>
         </div>
-        <img src="Assets/images/mouse.png" alt="mouse" style="position: absolute; right: -200px; z-index: -1; top: 57%; height: 90%;">
-        <div style="display: flex; justify-content: center;">
-            <img src="Assets/images/table.png" alt="mouse" style="position: absolute; z-index: -1; top: 57%; height: 1000px; width: 2000px;">
-        </div>
     </body>
+    <script src="./jquery-3.6.3.js"></script>
+    <script src="./login.js"></script>
 </html>
