@@ -4,6 +4,7 @@ let nameField = document.getElementById("nameField");
 let title = document.getElementById("formTitle");
 let submitButton = document.getElementById("submitButton")
 
+
 signInBtn.onclick = function(){
   nameField.style.maxHeight = "0";
   title.innerHTML = "Welcome Back"
@@ -17,6 +18,7 @@ signUpBtn.onclick = function(){
   signInBtn.classList.remove("disable");
   signUpBtn.classList.add("disable")
 }
+
 
 
 
