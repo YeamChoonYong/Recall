@@ -3,6 +3,7 @@ let signInBtn = document.getElementById("signInBtn");
 let nameField = document.getElementById("nameField");
 let title = document.getElementById("formTitle");
 let submitButton = document.getElementById("submitButton")
+var formStatus = "signUp"
 
 
 signInBtn.onclick = function(){
@@ -10,6 +11,7 @@ signInBtn.onclick = function(){
   title.innerHTML = "Welcome Back"
   signInBtn.classList.add("disable");
   signUpBtn.classList.remove("disable")
+  formStatus = "signIn"
 }
 
 signUpBtn.onclick = function(){
@@ -17,6 +19,7 @@ signUpBtn.onclick = function(){
   title.innerHTML = "Identify Yourself"
   signInBtn.classList.remove("disable");
   signUpBtn.classList.add("disable")
+  formStatus = "signUp"
 }
 
 
@@ -38,23 +41,42 @@ $(document).ready(function () {
         "Email": accountEmail,
         "Password": accountPassword
       };
-      var settings = {
-        "async": true,
-        "crossDomain": true,
-        "url": "https://recalldatabase-728b.restdb.io/rest/accountinformation",
-        "method": "POST",
-        "headers": {
-          "content-type": "application/json",
-          "x-apikey": APIKEY,
-          "cache-control": "no-cache"
-        },
-        "processData": false,
-        "data": JSON.stringify(jsondata)
+      if (formStatus == "signUp"){
+        var settings = {
+          "async": true,
+          "crossDomain": true,
+          "url": "https://recalldatabase-728b.restdb.io/rest/accountinformation",
+          "method": "POST",
+          "headers": {
+            "content-type": "application/json",
+            "x-apikey": APIKEY,
+            "cache-control": "no-cache"
+          },
+          "processData": false,
+          "data": JSON.stringify(jsondata)
+        }
+        
+        $.ajax(settings).done(function (response) {
+          console.log(response);
+        });
+      } else {
+        var settings = {
+          "async": true,
+          "crossDomain": true,
+          "url": "https://recalldatabase-728b.restdb.io/rest/accountinformation",
+          "method": "GET",
+          "headers": {
+            "content-type": "application/json",
+            "x-apikey": APIKEY,
+            "cache-control": "no-cache"
+          }
+        }
+        
+        $.ajax(settings).done(function (response) {
+          console.log(response);
+        });
       }
-      
-      $.ajax(settings).done(function (response) {
-        console.log(response);
-      });
+        
     })
     
 })

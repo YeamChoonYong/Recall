@@ -1,0 +1,129 @@
+@keyframes navGlitch1 {
+    0% {opacity: 0%}
+    10% {opacity: 50%}
+    20% {opacity: 80%}
+    30% {opacity: 60%; color: aqua;}
+    40% {opacity: 70%}
+    50% {opacity: 50%}
+    60% {opacity: 0%}
+    70% {opacity: 80%}
+    80% {opacity: 60%}
+    90% {opacity: 90%}
+    100% {opacity: 0%}
+}
+
+@keyframes navGlitch2 {
+    0% {opacity: 0%}
+    10% {opacity: 70%}
+    20% {opacity: 50%}
+    30% {opacity: 80%}
+    40% {opacity: 50%}
+    50% {opacity: 70%}
+    60% {opacity: 0%}
+    70% {opacity: 70%; color: aqua;}
+    80% {opacity: 80%}
+    90% {opacity: 60%}
+    100% {opacity: 0%}
+}
+
+@keyframes navGlitch3 {
+    0% {opacity: 0%}
+    10% {opacity: 50%}
+    20% {opacity: 60%}
+    30% {opacity: 80%}
+    40% {opacity: 65%}
+    50% {opacity: 75%}
+    60% {opacity: 0%}
+    70% {opacity: 90%}
+    80% {opacity: 80%}
+    90% {opacity: 70%; color: aqua;}
+    100% {opacity: 0%}
+}
+
+@keyframes logoGlitch {
+    0% {opacity: 100%}
+    10% {opacity: 80%}
+    20% {opacity: 90%}
+    30% {opacity: 60%}
+    40% {opacity: 70%}
+    50% {opacity: 40%}
+    60% {opacity: 50%}
+    70% {opacity: 30%}
+    80% {opacity: 50%}
+    90% {opacity: 70%}
+    100% {opacity: 100%}
+}
+
+@keyframes textGlitch {
+    0% {opacity: 100%}
+    50% {opacity: 75%}
+    100% {opacity: 100%}
+}
+
+@keyframes holoGlitch {
+    0% {opacity: 80%}
+    50% {opacity: 50%}
+    100% {opacity: 80%}
+}
+
+
+.glitchyBox {
+    position: absolute;
+    border: 2px grey solid;
+    background-color: grey;
+    height: 80px;
+    width: 80px;
+    animation-name: navGlitch;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+}
+
+p {
+    animation-name: textGlitch;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+
+#glitchedGameLogo {
+    animation-name: logoGlitch;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+
+
+#navbarHome {
+    animation-name: navGlitch1;
+    animation-duration: 1.3s;
+    animation-iteration-count: infinite;
+}
+
+#navbarAbout {
+    animation-name: navGlitch2;
+    animation-duration: 1.1s;
+    animation-iteration-count: infinite;
+}
+
+#navbarOST {
+    animation-name: navGlitch3;
+    animation-duration: 1.2s;
+    animation-iteration-count: infinite;
+}
+
+.hologram {
+    animation-name: holoGlitch;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+
+
+#footerFAQ {
+    animation-name: navGlitch1;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+}
+
+#footerDiscord {
+    animation-name: navGlitch2;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+}
