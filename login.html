@@ -9,6 +9,9 @@
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
     </head>
     <body style="background: black;">
+        <div class='loadAnimation'>
+            <lottie-player src="https://assets6.lottiefiles.com/packages/lf20_4kmUDEKo63.json"  background="#000000"  speed="2"  style="width: 100%; height: 100%;"  loop  autoplay></lottie-player>
+        </div>
         <div class="frame">
             <div class="loginForm">
                 <h1 id="formTitle">Identify Yourself</h1>
@@ -35,8 +38,12 @@
                     </div>
                 </form>
             </div>
+            <div class="formProjector">
+                <img src="Assets/images/projector.jpg" alt="projector">
+            </div>
         </div>
     </body>
     <script src="./jquery-3.6.3.js"></script>
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
     <script src="./login.js"></script>
 </html>

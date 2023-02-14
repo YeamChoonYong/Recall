@@ -125,3 +125,5 @@ var unlockedLogs = ['intro', '1', '2', '3']
 const introductionName = 'Introduction'
 document.getElementById('entryLogIntro').innerHTML = introductionName
 console.log('banana')
+
+

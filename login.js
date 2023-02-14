@@ -1,3 +1,7 @@
+$(window).on("load",function(){
+  $('.loadAnimation').fadeOut(2000);
+});
+
 let signUpBtn = document.getElementById("signUpBtn");
 let signInBtn = document.getElementById("signInBtn");
 let nameField = document.getElementById("nameField");
@@ -39,9 +43,13 @@ $(document).ready(function () {
       let jsondata = {
         "Username": accountName,
         "Email": accountEmail,
-        "Password": accountPassword
+        "Password": accountPassword,
+        "Achievements": []
       };
       if (formStatus == "signUp"){
+        if (accountName.length > 15){
+          
+        }
         var settings = {
           "async": true,
           "crossDomain": true,
@@ -71,12 +79,27 @@ $(document).ready(function () {
             "cache-control": "no-cache"
           }
         }
-        
+        var nickname;
         $.ajax(settings).done(function (response) {
-          console.log(response);
+          for (account of response) {
+            if (jsondata.Email == account.Email) {
+              if (jsondata.Password == account.Password) {
+                console.log('match')
+                var match = true
+                var nickname = account.Username;
+                location.href = '/index.html'
+              } else {
+                console.log('no match')
+                var match = false
+              }
+            } else {
+              console.log('no match')
+              var match = false
+            }
+          }
+          return nickname
         });
       }
-        
     })
     
 })
