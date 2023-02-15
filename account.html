@@ -33,11 +33,11 @@
                     </div>
                     <div class="navbarBtn2">
                         <i class="fa-solid fa-music"></i>
-                        <a href="/soundtrack.html" class="navbarLinks">OST</a>
+                        <a href="#" class="navbarLinks" id="navbarOST">OST</a>
                     </div>
                     <div class="navbarBtn2">
-                        <i class="fa-solid fa-user"></i>
-                        <a href="/account.html" class="navbarLinks"></a>
+                        <i class="fa-solid fa-user" id="musicIcon"></i>
+                        <a href="/account.html" class="navbarLinks" id="navbarAccount"></a>
                     </div>
                 </ul>
             </div>
@@ -46,8 +46,8 @@
             <div class="mainContainer">
                 <img src="Assets/images/logo/logo.png" alt="logo" id="gameLogo">
                 <div id="accountpageName">
-                    <h1 style="margin-bottom: 50px; text-decoration: underline;">StarBanditSounds</h1>
-                    <h2>Here are some achievements that are coming to the game!</h2>
+                    <h1 id="achievementAccount"></h1>
+                    <h2 class="achievementDescription">Here are some achievements that are coming to the game!</h2>
                 </div>
                 <hr>
                 <table id="achievementList">
@@ -102,12 +102,14 @@
             <div class="footerContent">
                 <ul class="footerLinks">
                     <li>
+                        <i class="fa-solid fa-comment-dots"></i>
                         <a href="/faq.html">FAQ</a>
                     </li>
                     <li id="toMessenger">
                         <a href="/messenger.html">???</a>
                     </li>
                     <li>
+                        <i class="fa-brands fa-discord"></i>
                         <a href="/">Discord</a>
                     </li>
                 </ul>

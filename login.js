@@ -26,10 +26,6 @@ signUpBtn.onclick = function(){
   formStatus = "signUp"
 }
 
-
-
-
-
 $(document).ready(function () {
     const APIKEY = "63e24b93478852088da67e53";
 
@@ -44,12 +40,9 @@ $(document).ready(function () {
         "Username": accountName,
         "Email": accountEmail,
         "Password": accountPassword,
-        "Achievements": []
+        "Achievements": {'achievements' : []}
       };
       if (formStatus == "signUp"){
-        if (accountName.length > 15){
-          
-        }
         var settings = {
           "async": true,
           "crossDomain": true,
@@ -66,6 +59,8 @@ $(document).ready(function () {
         
         $.ajax(settings).done(function (response) {
           console.log(response);
+          sessionStorage.setItem ('accountName', accountName)
+          location.href = '/index.html'
         });
       } else {
         var settings = {
@@ -79,13 +74,13 @@ $(document).ready(function () {
             "cache-control": "no-cache"
           }
         }
-        var nickname;
         $.ajax(settings).done(function (response) {
           for (account of response) {
             if (jsondata.Email == account.Email) {
               if (jsondata.Password == account.Password) {
                 console.log('match')
                 var match = true
+                sessionStorage.setItem ('accountName', account.Username)
                 var nickname = account.Username;
                 location.href = '/index.html'
               } else {

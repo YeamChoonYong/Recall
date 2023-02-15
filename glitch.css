@@ -66,18 +66,6 @@
     100% {opacity: 80%}
 }
 
-
-.glitchyBox {
-    position: absolute;
-    border: 2px grey solid;
-    background-color: grey;
-    height: 80px;
-    width: 80px;
-    animation-name: navGlitch;
-    animation-duration: 1.5s;
-    animation-iteration-count: infinite;
-}
-
 p {
     animation-name: textGlitch;
     animation-duration: 2s;
@@ -91,19 +79,19 @@ p {
 }
 
 
-#navbarHome {
+#navbarHomeBroke {
     animation-name: navGlitch1;
     animation-duration: 1.3s;
     animation-iteration-count: infinite;
 }
 
-#navbarAbout {
+#navbarAboutBroke {
     animation-name: navGlitch2;
     animation-duration: 1.1s;
     animation-iteration-count: infinite;
 }
 
-#navbarOST {
+#navbarOSTBroke {
     animation-name: navGlitch3;
     animation-duration: 1.2s;
     animation-iteration-count: infinite;
