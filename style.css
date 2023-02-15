@@ -65,6 +65,13 @@ html {
     margin: 5px;
 }
 
+.submitButton:hover {
+    background-color: rgb(136, 239, 255);
+    color: rgb(0, 0, 70);
+    border: rgb(0, 0, 70) 2px solid;
+    transition: all 0.3s ease;
+}
+
 #achievementList {
         border: white 3px solid;
 }
@@ -308,6 +315,10 @@ body {
     text-decoration: none;
 }
 
+#navbarOST {
+    margin-left: 0;
+}
+
 .mainImg--container {
     display: flex;
     justify-content: center;
@@ -364,6 +375,7 @@ hr {
 .projector {
     max-width: 700px;
     max-height: 300px;
+    margin-top: 70px;
 }
 
 
@@ -450,6 +462,12 @@ hr {
     list-style: none;
     padding: 10px 0;
     font-size: 20px;
+}
+
+.entryLogDescription {
+    text-align: center;
+    width: 800px;
+    margin-top: 20px;
 }
 
 footer {
@@ -558,14 +576,30 @@ a:visited {
         max-width: 290px;
     }
 
+    #achievementAccount {
+        margin-bottom: 50px; 
+        text-decoration: underline;
+        font-size: 2rem;
+    }
+
+    .achievementDescription {
+        font-size: 1.5rem;
+    }
+
     #achievementList {
         font-size: 8px;
     }
+
+    
 }
 
 @media screen and (max-width: 768px) {
     video {
         max-width: 768px;
+    }
+
+    #navbarAccount {
+        font-size: 30px;
     }
 }
 
