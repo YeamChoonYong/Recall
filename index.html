@@ -65,13 +65,47 @@
                     <p style="padding-top: 20px;">However, this website was created for the sole reason of showcasing the multiple different <span style="color: rgb(164, 216, 255)">t</span>hings you could expect in the game when it comes out!</p>
                 </div>
             </div>
-            <div class="mainContainer">
-                <div class="mainContent">
-                    <h1 style="padding-top: 80px;">Contact Information</h1>
+            <div class="mainContainer" style="margin-bottom: 80px">
+                <div class="mainContent" id="welcomeHeading">
+                    <h1 style="font-size: 35px; margin-top: 40px;">Contact Information</h1>
                     <h2>You got some questions about the game?</h2>
-                    <hr>
-                    <p style="padding: 20px;">We have a contact page! You can ask us any questions about the game!</p>
-                    <a href="/contact.html" style="padding: 20px; font-size: 20px; text-decoration: none;">Find the contact page here!</a>
+                </div>
+                <hr>
+                <p>You can ask us here right away!</p>
+                <div class="contactInformation">
+                    <div>
+                        <h1>
+                            Want to contact us?
+                        </h1>
+                        <p>
+                            Support Inquiries
+                            <br>
+                            <a href="mailto:supportrecalldevs.com">support@recalldevs.com</a>
+                        </p>
+                    </div>
+                    <div>
+                        <form class="contactForm">
+                            <div class="formQuestion">
+                                <div>
+                                    <label for="name">Name</label>
+                                    <input type="text" name="Name" id="Name" placeholder="Name" class="inputQuestion">
+                                </div>
+                                <div>
+                                    <label for="email">Email</label>
+                                    <input type="text" name="Email" id="Email" placeholder="Email" class="inputQuestion">
+                                </div>
+                            </div>
+                            <div class="formQuestion">
+                                <div>
+                                    <label for="message">Message</label>
+                                    <textarea rows="4" name="Message" id="Message" placeholder="Your Message Here" class="textQuestion"></textarea>
+                                </div>
+                            </div>
+                            <div class="formQuestion">
+                                <button type="submit" class="contactSubmitButton">Submit</button>
+                            </div>
+                        </form>
+                    </div>
                 </div>
             </div>
         </div>
@@ -96,9 +130,10 @@
             </div>
         </footer>
     </body>
-    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.1/dist/jquery.slim.min.js"></script>
+    <script src="jquery-3.6.3.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
     <script src="script.js"></script>
+    <script src="update.js"></script>
     <script src="https://kit.fontawesome.com/ca4dfa9ac0.js" crossorigin="anonymous"></script>
 </html>

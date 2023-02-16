@@ -378,6 +378,18 @@ hr {
     margin-top: 70px;
 }
 
+@keyframes  fadeAway {
+    0% {opacity: 100%}
+    50% {opacity: 75%}
+    100% {opacity: 100%}
+}
+
+.messengerCue {
+    color: rgb(47, 47, 47);
+    animation-name: fadeAway;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
 
 .theMessage p{
     margin: 30px;
@@ -416,6 +428,8 @@ hr {
     background-image: url('Assets/images/space.jpg');
     width: 50%;
     border: white solid 2px;
+    border-radius: 20px;
+    margin-bottom: 80px;
 }
 
 .trackSelection {
@@ -444,11 +458,21 @@ hr {
     margin: 10px;
 }
 
+.playButton:hover {
+    opacity: 50%;
+    transition: all 0.3s ease
+}
+
 .resetButton {
     display: flex;
     justify-content: flex-end;
     max-width: 30px;
     margin: 10px;
+}
+
+.resetButton:hover {
+    opacity: 50%;
+    transition: all 0.3s ease
 }
 
 .logSelectionMenu {
@@ -468,6 +492,73 @@ hr {
     text-align: center;
     width: 800px;
     margin-top: 20px;
+}
+
+.contactInformation {
+    display: flex; 
+    justify-content: space-evenly; 
+    align-items: center; 
+    margin-bottom: 20px;
+}
+
+.contactForm {
+    margin-top: 10px;
+    border: 1px;
+    border-style: solid;
+    border-color: white;
+    padding: 15px;
+    max-width: 800px;
+}
+
+.formQuestion {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.inputQuestion {
+    width: 50%;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 5px; 
+    border: 1px solid white;
+    color: white;
+    background-color: black;
+}
+
+.textQuestion {
+    resize: none;
+    width: 100%;
+    height: 150px;
+    padding: 10px;
+    margin-top: 2px;
+    border: 1px solid white;
+    color: white;
+    background-color: black;
+}
+
+.contactSubmitButton {
+    display: flex;
+    justify-content: center;
+    background: black;
+    border: 2px solid white;
+    padding: 20px;
+    max-width: 260px;
+    font-size: 30px;
+    border-radius: 10px;
+}
+
+.contactSubmitButton:hover {
+    background-color: white;
+    color: black;
+    transition: all 0.3s ease
+}
+
+.xanReading {
+    width: 400px; 
+    height: 400px; 
+    max-width: 400px;
 }
 
 footer {
@@ -589,8 +680,6 @@ a:visited {
     #achievementList {
         font-size: 8px;
     }
-
-    
 }
 
 @media screen and (max-width: 768px) {
@@ -718,5 +807,23 @@ a:visited {
         width: 100%;
         padding: 5px;
         margin: 10px 0;
+    }
+
+    .contactInformation {
+        flex-direction: column;
+    }
+
+    .soundtrackMenu {
+        width: 80%;
+    }
+
+    .xanReading {
+        width: 50%;
+        height: 50%;
+    }
+
+    .gramophone {
+        width: 30%;
+        margin-bottom: -50px;
     }
 }

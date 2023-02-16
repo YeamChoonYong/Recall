@@ -35,12 +35,12 @@ $(document).ready(function () {
       let accountName = $("#username").val();
       let accountEmail = $("#email").val();
       let accountPassword = $("#password").val();
-  
+      let accountAchievements = {'achievements' : []}
       let jsondata = {
         "Username": accountName,
         "Email": accountEmail,
         "Password": accountPassword,
-        "Achievements": {'achievements' : []}
+        "Achievements": accountAchievements,
       };
       if (formStatus == "signUp"){
         var settings = {
@@ -59,7 +59,11 @@ $(document).ready(function () {
         
         $.ajax(settings).done(function (response) {
           console.log(response);
-          sessionStorage.setItem ('accountName', accountName)
+          sessionStorage.setItem ('accountName', accountName);
+          accountAchievements = JSON.stringify(accountAchievements);
+          accountAchievements = JSON.parse(accountAchievements);
+          console.log(accountAchievements);
+          sessionStorage.setItem ('achievements', JSON.stringify(accountAchievements.achievements));
           location.href = '/index.html'
         });
       } else {
@@ -80,8 +84,11 @@ $(document).ready(function () {
               if (jsondata.Password == account.Password) {
                 console.log('match')
                 var match = true
-                sessionStorage.setItem ('accountName', account.Username)
-                var nickname = account.Username;
+                sessionStorage.setItem ('accountName', account.Username);
+                accountAchievements = JSON.stringify(accountAchievements);
+                accountAchievements = JSON.parse(accountAchievements);
+                console.log(accountAchievements);
+                sessionStorage.setItem ('achievements', JSON.stringify(accountAchievements.achievements));
                 location.href = '/index.html'
               } else {
                 console.log('no match')

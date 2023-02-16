@@ -33,11 +33,11 @@
                         <a href="/about.html" class="navbarLinks">About</a>
                     </div>
                     <div class="navbarBtn2">
-                        <i class="fa-solid fa-music"></i>
+                        <i class="fa-solid fa-music" id="musicIcon"></i>
                         <a href="#" class="navbarLinks" id="navbarOST">OST</a>
                     </div>
                     <div class="navbarBtn2">
-                        <i class="fa-solid fa-user" id="musicIcon"></i>
+                        <i class="fa-solid fa-user"></i>
                         <a href="/account.html" class="navbarLinks" id="navbarAccount"></a>
                     </div>
                 </ul>
@@ -47,13 +47,44 @@
             <div class="mainContainer">
                 <div class="mainContent" id="welcomeHeading">
                     <img src="Assets/images/logo/logo.png" alt="logo" id="gameLogo">
-                    <h1 style="font-size: 35px">You got some questions different from the FAQ?</h1>
+                    <h1 style="font-size: 35px; margin-top: 40px;">You got some questions different from the FAQ?</h1>
                     <h2>We got some ways for you to ask us away!</h2>
                 </div>
-                <div>
-                    <p>
-                        Hi
-                    </p>
+                <hr>
+                <div class="contactInformation">
+                    <div>
+                        <h1>
+                            Want to contact us?
+                        </h1>
+                        <p>
+                            Support Inquiries
+                            <br>
+                            <a href="mailto:supportrecalldevs.com">support@recalldevs.com</a>
+                        </p>
+                    </div>
+                    <div>
+                        <form class="contactForm">
+                            <div class="formQuestion">
+                                <div>
+                                    <label for="name">Name</label>
+                                    <input type="text" name="Name" id="Name" placeholder="Name" class="inputQuestion">
+                                </div>
+                                <div>
+                                    <label for="email">Email</label>
+                                    <input type="text" name="Email" id="Email" placeholder="Email" class="inputQuestion">
+                                </div>
+                            </div>
+                            <div class="formQuestion">
+                                <div>
+                                    <label for="message">Message</label>
+                                    <textarea rows="4" name="Message" id="Message" placeholder="Your Message Here" class="textQuestion"></textarea>
+                                </div>
+                            </div>
+                            <div class="formQuestion">
+                                <button type="submit" class="contactSubmitButton">Submit</button>
+                            </div>
+                        </form>
+                    </div>
                 </div>
             </div>
         </div>
