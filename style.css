@@ -63,6 +63,7 @@ html {
     border-radius: 5px;
     padding: 5px;
     margin: 5px;
+    font-size: 40px;
 }
 
 .submitButton:hover {
@@ -489,6 +490,17 @@ hr {
     font-size: 20px;
 }
 
+.encryptionInput {
+    width: 80px;
+    height: 80px;
+    font-size: 50px;
+    margin: 0 50px;
+    text-align: center;
+    background-color: rgb(136, 239, 255);
+    color: rgb(0, 0, 70);
+    border-radius: 10px;
+}
+
 #hope {
     text-decoration: none;
 }
@@ -733,6 +745,16 @@ a:visited {
     #navbarAccount {
         font-size: 30px;
     }
+
+    .encryptionHeader {
+        font-size: 15px;
+    }
+
+    .encryptionInput {
+        margin: 15px;
+        width: 60px;
+        height: 60px
+    }
 }
 
 @media screen and (max-width: 600px) {
@@ -897,5 +919,20 @@ a:visited {
     #importantMessage {
         max-width: 300px;
         background-size: 800px 1600px;
+    }
+
+    .encryptionHeader {
+        font-size: 10px;
+    }
+
+    .encryptionInput {
+        margin: 5px;
+        width: 40px;
+        height: 40px;
+    }
+
+    .submitButton {
+        width: 120px;
+        font-size: 10px;
     }
 }
