@@ -59,7 +59,10 @@ $(document).ready(function () {
         
         $.ajax(settings).done(function (response) {
           console.log(response);
+          sessionStorage.setItem ('accountId', response._id)
           sessionStorage.setItem ('accountName', accountName);
+          sessionStorage.setItem ('accountEmail', accountEmail);
+          sessionStorage.setItem ('accountPassword', accountPassword);
           accountAchievements = JSON.stringify(accountAchievements);
           accountAchievements = JSON.parse(accountAchievements);
           console.log(accountAchievements);
@@ -84,7 +87,10 @@ $(document).ready(function () {
               if (jsondata.Password == account.Password) {
                 console.log('match')
                 var match = true
+                sessionStorage.setItem ('accountId', account._id)
                 sessionStorage.setItem ('accountName', account.Username);
+                sessionStorage.setItem ('accountEmail', account.Email);
+                sessionStorage.setItem ('accountPassword', account.Password);
                 accountAchievements = JSON.stringify(accountAchievements);
                 accountAchievements = JSON.parse(accountAchievements);
                 console.log(accountAchievements);
@@ -99,7 +105,6 @@ $(document).ready(function () {
               var match = false
             }
           }
-          return nickname
         });
       }
     })

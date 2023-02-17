@@ -356,7 +356,7 @@ hr {
     padding: 15px;
 }
 
-.hologram {
+/* .hologram {
     position: absolute;
     top: auto;
     width: 70%;
@@ -365,7 +365,7 @@ hr {
     max-width: 1200px;
     border-radius: 20px;
     
-}
+} */
 
 .hologramContainer {
     display: flex;
@@ -375,7 +375,6 @@ hr {
 .projector {
     max-width: 700px;
     max-height: 300px;
-    margin-top: 70px;
 }
 
 @keyframes  fadeAway {
@@ -425,7 +424,7 @@ hr {
 }
 
 .soundtrackMenu {
-    background-image: url('Assets/images/space.jpg');
+    background: linear-gradient(rgb(0, 0, 103),  rgb(0, 0, 47));
     width: 50%;
     border: white solid 2px;
     border-radius: 20px;
@@ -438,6 +437,7 @@ hr {
 }
 
 .trackSelection li {
+    background-image: url('Assets/images/space.jpg');
     padding: 10px;
     font-size: 20px;
     border: white solid 2px;
@@ -488,10 +488,32 @@ hr {
     font-size: 20px;
 }
 
+#hope {
+    text-decoration: none;
+}
+
+#hope:hover {
+    color: white;
+}
+
+#importantMessage {
+    text-align: center;
+    width: 800px;
+    margin-top: 20px;
+    border-radius: 20px;
+    padding: 20px 0;
+    background-image: url(assets/images/hologram.jpg);
+    background-size: 800px 800px;
+}
+
 .entryLogDescription {
     text-align: center;
     width: 800px;
     margin-top: 20px;
+    border-radius: 20px;
+    padding: 20px 0;
+    background-image: url(assets/images/hologram.jpg);
+    background-size: 800px 680px;
 }
 
 .contactInformation {
@@ -825,5 +847,34 @@ a:visited {
     .gramophone {
         width: 30%;
         margin-bottom: -50px;
+    }
+
+    .loginForm {
+        font-size: 13px;
+    }
+
+    .loginForm h1 {
+        font-size: 1.5rem;
+    }
+
+    .loginForm h2 {
+        font-size: 1.25rem;
+    }
+
+    .contactForm {
+        max-width: 250px;
+    }
+
+    .projector {
+        max-width: 260px;
+    }
+
+    .entryLogDescription p{
+        font-size: 10px;
+    }
+
+    #importantMessage {
+        max-width: 300px;
+        background-size: 800px 1600px;
     }
 }

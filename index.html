@@ -11,7 +11,7 @@
     <body>
         <header>
             <div id="banner">
-                <img alt="RECALL" class="img-responsive" src="/assets/images/logo/banner2.jpg">
+                <img alt="RECALL" class="img-responsive" src="/assets/images/logo/banner.jpg" id="bannerImage">
                 <span class="sr-only">RECALL</span>
             </div>
         </header>
@@ -33,7 +33,11 @@
                     </div>
                     <div class="navbarBtn2">
                         <i class="fa-solid fa-music" id="musicIcon"></i>
-                        <a href="#" class="navbarLinks" id="navbarOST">OST</a>
+                        <a href="#" class="navbarLinks" id="navbarOST"></a>
+                    </div>
+                    <div class="navbarBtn2">
+                        <i class="fa-solid fa-file-lines" id="logIcon"></i>
+                        <a href="#" class="navbarLinks" id="navbarMysteriousLogs"></a>
                     </div>
                     <div class="navbarBtn2">
                         <i class="fa-solid fa-user"></i>
@@ -67,24 +71,29 @@
             </div>
             <div class="mainContainer" style="margin-bottom: 80px">
                 <div class="mainContent" id="welcomeHeading">
-                    <h1 style="font-size: 35px; margin-top: 40px;">Contact Information</h1>
+                    <h1 style="margin-top: 40px;">Contact Information</h1>
                     <h2>You got some questions about the game?</h2>
                 </div>
                 <hr>
-                <p>You can ask us here right away!</p>
+                <p style="margin-top: 30px">You can ask us here right away!</p>
                 <div class="contactInformation">
                     <div>
                         <h1>
                             Want to contact us?
                         </h1>
+                        <img src="assets/images/contactsection.png" alt="contactArt" style="margin-left: -50px; width: 300px;">
                         <p>
                             Support Inquiries
                             <br>
                             <a href="mailto:supportrecalldevs.com">support@recalldevs.com</a>
                         </p>
+                        <p style="font-size: 10px; color: black; max-width: 300px;">
+                            This device is how you send a message to them...
+                            Maybe with the right message, the answers you are seeking might be revealed...
+                        </p>
                     </div>
                     <div>
-                        <form class="contactForm">
+                        <form class="contactForm" name="contactDevice">
                             <div class="formQuestion">
                                 <div>
                                     <label for="name">Name</label>
@@ -102,7 +111,7 @@
                                 </div>
                             </div>
                             <div class="formQuestion">
-                                <button type="submit" class="contactSubmitButton">Submit</button>
+                                <button type="button" class="contactSubmitButton" id="deviceSubmitButton">Submit</button>
                             </div>
                         </form>
                     </div>
@@ -114,14 +123,14 @@
                 <ul class="footerLinks">
                     <li>
                         <i class="fa-solid fa-comment-dots"></i>
-                        <a href="/faq.html">FAQ</a>
+                        <a href="/faq.html" id="footerFAQ">FAQ</a>
                     </li>
                     <li>
                         
                     </li>
                     <li>
                         <i class="fa-brands fa-discord"></i>
-                        <a href="/">Discord</a>
+                        <a href="/" id="footerDiscord">Discord</a>
                     </li>
                 </ul>
             </div>
