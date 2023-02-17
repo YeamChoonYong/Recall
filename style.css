@@ -74,6 +74,7 @@ html {
 
 #achievementList {
         border: white 3px solid;
+        max-width: 800px;
 }
 
 .achievement {
@@ -492,7 +493,23 @@ hr {
     text-decoration: none;
 }
 
+#hope:link {
+    color: white;
+}
+
 #hope:hover {
+    color: white;
+}
+
+#project {
+    text-decoration: none;
+}
+
+#project:link {
+    color: white;
+}
+
+#project:hover {
     color: white;
 }
 
@@ -507,13 +524,17 @@ hr {
 }
 
 .entryLogDescription {
-    text-align: center;
+    text-align: left;
     width: 800px;
     margin-top: 20px;
     border-radius: 20px;
     padding: 20px 0;
     background-image: url(assets/images/hologram.jpg);
     background-size: 800px 680px;
+}
+
+.entryLogDescription h1 {
+    text-align: center;
 }
 
 .contactInformation {

@@ -1,5 +1,5 @@
 $(document).ready(function() {
-    const APIKEY = "63e24b93478852088da67e53";
+    const APIKEY = "63ef6f27478852088da683de";
     const username = sessionStorage.getItem('accountName')
     const email = sessionStorage.getItem('accountEmail')
     const password = sessionStorage.getItem('accountPassword')
@@ -12,7 +12,7 @@ $(document).ready(function() {
         var settings = {
         "async": true,
         "crossDomain": true,
-        "url": `https://recalldatabase-728b.restdb.io/rest/accountinformation/${id}`,
+        "url": `https://recalldatabaseagain-f314.restdb.io/rest/accountinformation/${id}`,
         "method": "PUT",
         "headers": {
             "content-type": "application/json",

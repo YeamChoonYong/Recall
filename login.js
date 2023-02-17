@@ -27,7 +27,7 @@ signUpBtn.onclick = function(){
 }
 
 $(document).ready(function () {
-    const APIKEY = "63e24b93478852088da67e53";
+    const APIKEY = "63ef6f27478852088da683de";
 
     $(".submitButton").on("click", function (e) {
       e.preventDefault();
@@ -46,7 +46,7 @@ $(document).ready(function () {
         var settings = {
           "async": true,
           "crossDomain": true,
-          "url": "https://recalldatabase-728b.restdb.io/rest/accountinformation",
+          "url": "https://recalldatabaseagain-f314.restdb.io/rest/accountinformation",
           "method": "POST",
           "headers": {
             "content-type": "application/json",
@@ -73,7 +73,7 @@ $(document).ready(function () {
         var settings = {
           "async": true,
           "crossDomain": true,
-          "url": "https://recalldatabase-728b.restdb.io/rest/accountinformation",
+          "url": "https://recalldatabaseagain-f314.restdb.io/rest/accountinformation",
           "method": "GET",
           "headers": {
             "content-type": "application/json",

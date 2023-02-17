@@ -17,21 +17,22 @@ banner.addEventListener('click', function() {
         bannerImage.src = 'assets/images/logo/bannerbroken.jpg'
         function oops() {
             alert('0_0...I think you thought too hard...whoops')
+            var achievementUnlockedList = sessionStorage.getItem('achievements');
+            if (achievementUnlockedList.includes('Brainfart')){
+                return true
+            } else {
+                currentAchievementsList = JSON.parse(sessionStorage.getItem('achievements'));
+                currentAchievementsList.push('Brainfart');
+                sessionStorage.setItem('achievements', JSON.stringify(currentAchievementsList));
+                alert('Achievement Unlocked: Brainfart')
+                if (currentPage == '/account.html') {
+                    location.reload()
+                }
+            }
         }
         setTimeout(oops, 1000);
         clicks = 0
         var achievementUnlockedList = sessionStorage.getItem('achievements');
-        if (achievementUnlockedList.includes('Brainfart')){
-            return true
-        } else {
-            currentAchievementsList = JSON.parse(sessionStorage.getItem('achievements'));
-            currentAchievementsList.push('Brainfart');
-            sessionStorage.setItem('achievements', JSON.stringify(currentAchievementsList));
-            alert('Achievement Unlocked: Brainfart')
-            if (currentPage == '/account.html') {
-                location.reload()
-            }
-        }
     }
 })
 
@@ -43,19 +44,19 @@ window.addEventListener('load', function() {
     if (currentPage == '/account.html') {
         document.getElementById('achievementAccount').innerHTML = nickname;
         if (achievementUnlockedList.includes('Brainfart')) {
-            document.getElementById('brainfart').innerHTML = 'Brainfart';
+            document.getElementById('brainfartImage').src = 'assets/images/achievementone.png';
         } else {
-            document.getElementById('brainfart').innerHTML = '???';
+            document.getElementById('brainfartImage').src = 'assets/images/achievement.jpg';
         }
         if (achievementUnlockedList.includes('Invoice')) {
-            document.getElementById('invoice').innerHTML = 'Invoice';
+            document.getElementById('invoiceImage').src = 'assets/images/achievementtwo.png';
         } else {
-            document.getElementById('invoice').innerHTML = '???';
+            document.getElementById('invoiceImage').src = 'assets/images/achievement.jpg';
         }
         if (achievementUnlockedList.includes('Familiar Melodies')) {
-            document.getElementById('familiarMelodies').innerHTML = 'Familiar Melodies';
+            document.getElementById('familiarMelodiesImage').src = 'assets/images/achievementthree.png';
         } else {
-            document.getElementById('familiarMelodies').innerHTML = '???';
+            document.getElementById('familiarMelodiesImage').src = 'assets/images/achievement.jpg';
         }
     }
 });
@@ -118,7 +119,7 @@ window.addEventListener('load', function() {
         }
     } else {
         ostLogo.style.display = 'none'
-        if ((currentPage == '/messenger.html')||(currentPage == '/log1.html')||(currentPage == '/log2.html')||(currentPage == '/log3.html')||(currentPage == '/log4.html'))  {
+        if ((currentPage == '/messenger.html')||(currentPage == '/logone.html')||(currentPage == '/logtwo.html')||(currentPage == '/logthree.html')||(currentPage == '/logfour.html')) {
             ostBroken.innerHTML = '???'
             ostBroken.href = 'encryption.html'
         } else {
@@ -130,15 +131,44 @@ window.addEventListener('load', function() {
 })
 
 window.addEventListener('load', function() {
-    if (currentPage == '/log1.html') {
+    if (currentPage == '/logone.html') {
         mysteriousLogsUnlocked = sessionStorage.getItem('mysteriousLogsUnlocked')
         if (mysteriousLogsUnlocked == 'true') {
+            sessionStorage.setItem('log1Unlocked', true)
             return false
         } else {
             alert('Oh...well this looks interesting...')
             alert('Maybe if you look around more...you could find more stuff')
             sessionStorage.setItem('mysteriousLogsUnlocked', true)
             sessionStorage.setItem('log1Unlocked', true)
+            return true
+        }
+    }
+
+    if (currentPage == '/logtwo.html') {
+        mysteriousLogsUnlocked = sessionStorage.getItem('mysteriousLogsUnlocked')
+        if (mysteriousLogsUnlocked == 'true') {
+            sessionStorage.setItem('log2Unlocked', true)
+            return false
+        } else {
+            alert('Oh...well this looks interesting...')
+            alert('Maybe if you look around more...you could find more stuff')
+            sessionStorage.setItem('mysteriousLogsUnlocked', true)
+            sessionStorage.setItem('log2Unlocked', true)
+            return true
+        }
+    }
+
+    if (currentPage == '/logthree.html') {
+        mysteriousLogsUnlocked = sessionStorage.getItem('mysteriousLogsUnlocked')
+        if (mysteriousLogsUnlocked == 'true') {
+            sessionStorage.setItem('log3Unlocked', true)
+            return false
+        } else {
+            alert('Oh...well this looks interesting...')
+            alert('Maybe if you look around more...you could find more stuff')
+            sessionStorage.setItem('mysteriousLogsUnlocked', true)
+            sessionStorage.setItem('log3Unlocked', true)
             return true
         }
     }
@@ -215,30 +245,23 @@ window.addEventListener('load', function(e) {
             return false
         }
         if (log2Status == 'true') {
-            entryLog1.innerHTML = 'Entry Log 2'
-            entryLog1.href = '/logtwo.html'
-        } else {
-            return false
+            entryLog2.innerHTML = 'Entry Log 2'
+            entryLog2.href = '/logtwo.html'
         }
         if (log3Status == 'true') {
-            entryLog1.innerHTML = 'Entry Log 3'
-            entryLog1.href = '/logthree.html'
-        } else {
-            return false
+            entryLog3.innerHTML = 'Entry Log 3'
+            entryLog3.href = '/logthree.html'
         }
         if (log4Status == 'true') {
-            entryLog1.innerHTML = 'Entry Log 4'
-            entryLog1.href = '/logfour.html'
-        } else {
-            return false
+            entryLog4.innerHTML = 'Entry Log 4'
+            entryLog4.href = '/logfour.html'
+        }
+        if ((log1Status == 'true') && (log2Status == 'true') && (log3Status == 'true')) {
+            theFinalPiece = document.getElementById('theFinalPiece')
+            theFinalPiece.innerHTML = '???'
         }
     } else {
         return true
-    }
-    
-    if ((log1Status == 'true')&&(log2Status == 'true')&&(log3Status == 'true')) {
-        theFinalPiece = document.getElementById('theFinalPiece')
-        theFinalPiece.innerHTML = '???'
     }
 })
 
@@ -252,6 +275,7 @@ window.addEventListener('load', function(e) {
             currentAchievementsList.push('Invoice');
             sessionStorage.setItem('achievements', JSON.stringify(currentAchievementsList));
             alert('Achievement Unlocked: Invoice')
+            sessionStorage.setItem('log4Unlocked', true)
         }
     }
 })
