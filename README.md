@@ -1,5 +1,7 @@
 # Recall
 
+GitHub Link: https://yeamchoonyong.github.io/Recall/
+
 This project is about a website that is used to promote and preview a game that has not been released yet. However, there is also a twist to this website. The website also has many different secrets that are to be found. These secrets would give the users achievements which will then be displayed on their accounts. The goal of this project was to make a website that utilizes unique interactivity while also including a gamification system. The name of this project would be named Recall, which is the name of the game.
 
 ## Design Process
