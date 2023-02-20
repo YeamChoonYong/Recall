@@ -25,7 +25,7 @@ banner.addEventListener('click', function() {
                 currentAchievementsList.push('Brainfart');
                 sessionStorage.setItem('achievements', JSON.stringify(currentAchievementsList));
                 alert('Achievement Unlocked: Brainfart')
-                if (currentPage == 'account.html') {
+                if (currentPage == '/Recall/account.html') {
                     location.reload()
                 }
             }
@@ -41,7 +41,7 @@ window.addEventListener('load', function() {
     console.log('HelloWorld')
     document.getElementById('navbarAccount').innerHTML = nickname;
     var achievementUnlockedList = sessionStorage.getItem('achievements');
-    if (currentPage == 'account.html') {
+    if (currentPage == '/Recall/account.html') {
         document.getElementById('achievementAccount').innerHTML = nickname;
         if (achievementUnlockedList.includes('Brainfart')) {
             document.getElementById('brainfartImage').src = 'Assets/images/achievementone.png';
@@ -61,7 +61,7 @@ window.addEventListener('load', function() {
     }
 });
 
-if (currentPage == 'encryption.html') {
+if (currentPage == '/Recall/encryption.html') {
     console.log('code page functional')
     const submitCode = document.getElementById('codeSubmission');
     submitCode.addEventListener(
@@ -110,7 +110,7 @@ window.addEventListener('load', function() {
     ostBroken = document.getElementById('navbarOSTBroke')
     if (ostCheck == 'true') {
         ostLogo.style.display = 'block'
-        if ((currentPage == 'messenger.html')||(currentPage == 'logone.html')||(currentPage == 'logtwo.html')||(currentPage == 'logthree.html')||(currentPage == 'logfour.html')) {
+        if ((currentPage == '/Recall/messenger.html')||(currentPage == '/Recall/logone.html')||(currentPage == '/Recall/logtwo.html')||(currentPage == '/Recall/logthree.html')||(currentPage == '/Recall/logfour.html')) {
             ostBroken.innerHTML = 'OST'
             ostBroken.href = 'soundtrack.html'
         } else {
@@ -119,7 +119,7 @@ window.addEventListener('load', function() {
         }
     } else {
         ostLogo.style.display = 'none'
-        if ((currentPage == 'messenger.html')||(currentPage == 'logone.html')||(currentPage == 'logtwo.html')||(currentPage == 'logthree.html')||(currentPage == 'logfour.html')) {
+        if ((currentPage == '/Recall/messenger.html')||(currentPage == '/Recall/logone.html')||(currentPage == '/Recall/logtwo.html')||(currentPage == '/Recall/logthree.html')||(currentPage == '/Recall/logfour.html')) {
             ostBroken.innerHTML = '???'
             ostBroken.href = 'encryption.html'
         } else {
@@ -131,7 +131,7 @@ window.addEventListener('load', function() {
 })
 
 window.addEventListener('load', function() {
-    if (currentPage == 'logone.html') {
+    if (currentPage == '/Recall/logone.html') {
         mysteriousLogsUnlocked = sessionStorage.getItem('mysteriousLogsUnlocked')
         if (mysteriousLogsUnlocked == 'true') {
             sessionStorage.setItem('log1Unlocked', true)
@@ -145,7 +145,7 @@ window.addEventListener('load', function() {
         }
     }
 
-    if (currentPage == 'logtwo.html') {
+    if (currentPage == '/Recall/logtwo.html') {
         mysteriousLogsUnlocked = sessionStorage.getItem('mysteriousLogsUnlocked')
         if (mysteriousLogsUnlocked == 'true') {
             sessionStorage.setItem('log2Unlocked', true)
@@ -159,7 +159,7 @@ window.addEventListener('load', function() {
         }
     }
 
-    if (currentPage == 'logthree.html') {
+    if (currentPage == '/Recall/logthree.html') {
         mysteriousLogsUnlocked = sessionStorage.getItem('mysteriousLogsUnlocked')
         if (mysteriousLogsUnlocked == 'true') {
             sessionStorage.setItem('log3Unlocked', true)
@@ -181,7 +181,7 @@ window.addEventListener('load', function() {
     mysteriousLogsBroken = document.getElementById('navbarMysteriousLogsBroke')
     if (mysteriousLogsCheck == 'true') {
         mysteriousLogsLogo.style.display = 'block'
-        if ((currentPage == 'messenger.html')||(currentPage == 'logone.html')||(currentPage == 'logtwo.html')||(currentPage == 'logthree.html')||(currentPage == 'logfour.html')) {
+        if ((currentPage == '/Recall/messenger.html')||(currentPage == '/Recall/logone.html')||(currentPage == '/Recall/logtwo.html')||(currentPage == '/Recall/logthree.html')||(currentPage == '/Recall/logfour.html')) {
             mysteriousLogsBroken.innerHTML = 'Logs'
             mysteriousLogsBroken.href = 'mysteriouslogs.html'
         } else {
@@ -190,7 +190,7 @@ window.addEventListener('load', function() {
         }
     } else {
         mysteriousLogsLogo.style.display = 'none'
-        if ((currentPage == 'messenger.html')||(currentPage == 'logone.html')||(currentPage == 'logtwo.html')||(currentPage == 'logthree.html')||(currentPage == 'logfour.html')) {
+        if ((currentPage == '/Recall/messenger.html')||(currentPage == '/Recall/logone.html')||(currentPage == '/Recall/logtwo.html')||(currentPage == '/Recall/logthree.html')||(currentPage == '/Recall/logfour.html')) {
             mysteriousLogsBroken.innerHTML = '???'
             mysteriousLogs.addEventListener('click', function() {
                 alert('Hmm...Nothing Happened')
@@ -205,7 +205,7 @@ window.addEventListener('load', function() {
     }
 })
 
-if (currentPage == 'home.html') {
+if (currentPage == '/Recall/home.html') {
     submitMessage = document.getElementById('deviceSubmitButton')
     submitMessage.addEventListener('click', function(e) {
         var y = document.forms['contactDevice']['Name'].value.toLowerCase();
@@ -229,7 +229,7 @@ if (currentPage == 'home.html') {
 }
 
 window.addEventListener('load', function(e) {
-    if (currentPage == 'mysteriouslogs.html') {
+    if (currentPage == '/Recall/mysteriouslogs.html') {
         entryLog1 = document.getElementById('entryLog1')
         entryLog2 = document.getElementById('entryLog2')
         entryLog3 = document.getElementById('entryLog3')
@@ -266,7 +266,7 @@ window.addEventListener('load', function(e) {
 })
 
 window.addEventListener('load', function(e) {
-    if (currentPage == 'logfour.html') {
+    if (currentPage == '/Recall/logfour.html') {
         var achievementUnlockedList = sessionStorage.getItem('achievements');
         if (achievementUnlockedList.includes('Invoice')){
             return true
