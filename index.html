@@ -8,138 +8,42 @@
         <link rel="stylesheet" href="style.css">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
     </head>
-    <body>
-        <header>
-            <div id="banner">
-                <img alt="RECALL" class="img-responsive" src="/assets/images/logo/banner.jpg" id="bannerImage">
-                <span class="sr-only">RECALL</span>
+    <body style="background: black;">
+        <div class='loadAnimation'>
+            <lottie-player src="https://assets6.lottiefiles.com/packages/lf20_4kmUDEKo63.json"  background="#000000"  speed="2"  style="width: 100%; height: 100%;"  loop  autoplay></lottie-player>
+        </div>
+        <div class="frame">
+            <div class="loginForm">
+                <h1 id="formTitle">Identify Yourself</h1>
+                <h2>User</h2>
+                <form>
+                    <div class="inputGroup">
+                        <div class="inputField" id="nameField">
+                            <label for="fname">Username:</label><br>
+                            <input type="text" id="username" name="username"><br>
+                        </div>
+                        <div class="inputField">
+                            <label for="fname">Email:</label><br>
+                            <input type="text" id="email" name="email"><br>
+                        </div>
+                        <div class="inputField">
+                            <label for="fname">Password:</label><br>
+                            <input type="password" id="password" name="password"><br><br>
+                        </div>
+                        <input type="submit" value="submit" class="submitButton">
+                    </div>
+                    <div class="btnField">
+                        <button type="button" id="signUpBtn" class="disable">Sign Up</button>
+                        <button type="button" id="signInBtn">Sign In</button>
+                    </div>
+                </form>
             </div>
-        </header>
-        <nav class="navbar">
-            <div class="navbarContainer">
-                <div class="navbarToggle" id="mobile-menu">
-                    <span class="bar"></span>
-                    <span class="bar"></span>
-                    <span class="bar"></span>
-                </div>
-                <ul class="navbarMenu">
-                    <div class="navbarBtn2">
-                        <i class="fa-solid fa-house"></i>
-                        <a href="index.html" class="navbarLinks">Home</a>
-                    </div>
-                    <div class="navbarBtn2">
-                        <i class="fa-solid fa-gamepad"></i>
-                        <a href="/about.html" class="navbarLinks">About</a>
-                    </div>
-                    <div class="navbarBtn2">
-                        <i class="fa-solid fa-music" id="musicIcon"></i>
-                        <a href="#" class="navbarLinks" id="navbarOST"></a>
-                    </div>
-                    <div class="navbarBtn2">
-                        <i class="fa-solid fa-file-lines" id="logIcon"></i>
-                        <a href="#" class="navbarLinks" id="navbarMysteriousLogs"></a>
-                    </div>
-                    <div class="navbarBtn2">
-                        <i class="fa-solid fa-user"></i>
-                        <a href="/account.html" class="navbarLinks" id="navbarAccount"></a>
-                    </div>
-                </ul>
-            </div>
-        </nav>
-        <div class="main fadeIn">
-            <div class="mainContainer">
-                <div class="mainContent">
-                    <img src="Assets/images/logo/logo.png" alt="logo" id="gameLogo">
-                    <h1>Welcome To</h1>
-                    <h2>The Official Recall Site!</h2>
-                    <p style="padding-top: 20px; padding-bottom: 80px;">This is the official website reg<span style="color: rgb(164, 216, 255)">a</span>rding the development of the upcoming point and <span style="color: rgb(164, 216, 255)">c</span>lick story based game.</p>
-                </div>
-                <div class="mainImg--container">
-                    <video width="1024" height="576" style="border: 2px white solid" autoplay loop muted>
-                        <source src="Assets/videos/titlescreen.mp4" alt="gameDemo" type="video/mp4">
-                    </video>
-                </div>
-            </div>
-            <div class="mainContainer">
-                <div class="mainContent">
-                    <h1 style="padding-top: 80px;">Download Information</h1>
-                    <h2>Where can I download the game?</h2>
-                    <hr>
-                    <p style="padding-top: 20px;">Currently, Re<span style="color: rgb(164, 216, 255)">c</span>all is not out yet as it is still in devel<span style="color: rgb(164, 216, 255)">o</span>pment, so you <span style="color: rgb(164, 216, 255)">u</span>nfortunately can't download the game <span style="color: rgb(164, 216, 255)">n</span>ow.</p>
-                    <p style="padding-top: 20px;">However, this website was created for the sole purpose of showcasing the multiple different <span style="color: rgb(164, 216, 255)">t</span>hings you can expect in the game when it comes out!</p>
-                </div>
-            </div>
-            <div class="mainContainer" style="margin-bottom: 80px">
-                <div class="mainContent" id="welcomeHeading">
-                    <h1 style="margin-top: 40px;">Contact Information</h1>
-                    <h2>You got some questions about the game?</h2>
-                </div>
-                <hr>
-                <p style="margin-top: 30px">You can ask us here right away!</p>
-                <div class="contactInformation">
-                    <div>
-                        <img src="assets/images/contactsection.png" alt="contactArt" style="margin-left: -50px; width: 300px;">
-                        <p>
-                            Support Inquiries
-                            <br>
-                            <a href="mailto:supportrecalldevs.com">support@recalldevs.com</a>
-                        </p>
-                        <p style="font-size: 10px; color: black; max-width: 300px;">
-                            This device is how you send a message to them...
-                            Maybe with the right message, the answers you are seeking might be revealed...
-                        </p>
-                    </div>
-                    <div>
-                        <form class="contactForm" name="contactDevice" action="/about.html">
-                            <div class="formQuestion">
-                                <div>
-                                    <label for="name">Name</label>
-                                    <input type="text" name="Name" id="Name" placeholder="Name" class="inputQuestion">
-                                </div>
-                                <div>
-                                    <label for="email">Email</label>
-                                    <input type="text" name="Email" id="Email" placeholder="Email" class="inputQuestion">
-                                </div>
-                            </div>
-                            <div class="formQuestion">
-                                <div>
-                                    <label for="message">Message</label>
-                                    <textarea rows="4" name="Message" id="Message" placeholder="Your Message Here" class="textQuestion"></textarea>
-                                </div>
-                            </div>
-                            <div class="formQuestion">
-                                <button type="button" class="contactSubmitButton" id="deviceSubmitButton">Submit</button>
-                            </div>
-                        </form>
-                    </div>
-                </div>
+            <div class="formProjector">
+                <img src="Assets/images/projector.jpg" alt="projector">
             </div>
         </div>
-        <footer>
-            <div class="footerContent">
-                <ul class="footerLinks">
-                    <li>
-                        <i class="fa-solid fa-comment-dots"></i>
-                        <a href="/faq.html" id="footerFAQ">FAQ</a>
-                    </li>
-                    <li>
-                        
-                    </li>
-                    <li>
-                        <i class="fa-brands fa-discord"></i>
-                        <a href="/" id="footerDiscord">Discord</a>
-                    </li>
-                </ul>
-            </div>
-            <div class="footerBottom">
-                <p>End of Transmission...</p>
-            </div>
-        </footer>
     </body>
-    <script src="jquery-3.6.3.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="script.js"></script>
-    <script src="update.js"></script>
-    <script src="https://kit.fontawesome.com/ca4dfa9ac0.js" crossorigin="anonymous"></script>
+    <script src="./jquery-3.6.3.js"></script>
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+    <script src="./login.js"></script>
 </html>
