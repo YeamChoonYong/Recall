@@ -936,4 +936,9 @@ a:visited {
         width: 120px;
         font-size: 10px;
     }
+
+
+    .formProjector img{
+        height: 0px;
+    }
 }
