@@ -67,7 +67,7 @@ $(document).ready(function () {
           accountAchievements = JSON.parse(accountAchievements);
           console.log(accountAchievements);
           sessionStorage.setItem ('achievements', JSON.stringify(accountAchievements.achievements));
-          location.href = '/index.html'
+          location.href = '/home.html'
         });
       } else {
         var settings = {
