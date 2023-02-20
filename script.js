@@ -9,12 +9,12 @@ menu.addEventListener('click', function() {
 const banner = document.getElementById('banner')
 bannerImage = document.getElementById('bannerImage')
 var clicks = 0
-const forget = new Audio('/assets/sounds/forget.wav')
+const forget = new Audio('Assets/sounds/forget.wav')
 banner.addEventListener('click', function() {
     clicks += 1
     if (clicks == 5) {
         forget.play()
-        bannerImage.src = 'assets/images/logo/bannerbroken.jpg'
+        bannerImage.src = 'Assets/images/logo/bannerbroken.jpg'
         function oops() {
             alert('0_0...I think you thought too hard...whoops')
             var achievementUnlockedList = sessionStorage.getItem('achievements');
@@ -25,7 +25,7 @@ banner.addEventListener('click', function() {
                 currentAchievementsList.push('Brainfart');
                 sessionStorage.setItem('achievements', JSON.stringify(currentAchievementsList));
                 alert('Achievement Unlocked: Brainfart')
-                if (currentPage == '/account.html') {
+                if (currentPage == 'account.html') {
                     location.reload()
                 }
             }
@@ -41,27 +41,27 @@ window.addEventListener('load', function() {
     console.log('HelloWorld')
     document.getElementById('navbarAccount').innerHTML = nickname;
     var achievementUnlockedList = sessionStorage.getItem('achievements');
-    if (currentPage == '/account.html') {
+    if (currentPage == 'account.html') {
         document.getElementById('achievementAccount').innerHTML = nickname;
         if (achievementUnlockedList.includes('Brainfart')) {
-            document.getElementById('brainfartImage').src = 'assets/images/achievementone.png';
+            document.getElementById('brainfartImage').src = 'Assets/images/achievementone.png';
         } else {
-            document.getElementById('brainfartImage').src = 'assets/images/achievement.jpg';
+            document.getElementById('brainfartImage').src = 'Assets/images/achievement.jpg';
         }
         if (achievementUnlockedList.includes('Invoice')) {
-            document.getElementById('invoiceImage').src = 'assets/images/achievementtwo.png';
+            document.getElementById('invoiceImage').src = 'Assets/images/achievementtwo.png';
         } else {
-            document.getElementById('invoiceImage').src = 'assets/images/achievement.jpg';
+            document.getElementById('invoiceImage').src = 'Assets/images/achievement.jpg';
         }
         if (achievementUnlockedList.includes('Familiar Melodies')) {
-            document.getElementById('familiarMelodiesImage').src = 'assets/images/achievementthree.png';
+            document.getElementById('familiarMelodiesImage').src = 'Assets/images/achievementthree.png';
         } else {
-            document.getElementById('familiarMelodiesImage').src = 'assets/images/achievement.jpg';
+            document.getElementById('familiarMelodiesImage').src = 'Assets/images/achievement.jpg';
         }
     }
 });
 
-if (currentPage == '/encryption.html') {
+if (currentPage == 'encryption.html') {
     console.log('code page functional')
     const submitCode = document.getElementById('codeSubmission');
     submitCode.addEventListener(
@@ -81,7 +81,7 @@ if (currentPage == '/encryption.html') {
                             currentAchievementsList.push('Familiar Melodies');
                             sessionStorage.setItem('achievements', JSON.stringify(currentAchievementsList));
                             alert('Achievement Unlocked: Familiar Melodies')
-                            location.href = '/soundtrack.html'
+                            location.href = 'soundtrack.html'
                             return true;
                         } else {
                             alert('Invalid Code, please try again ' + sessionStorage.getItem('accountName'));
@@ -110,7 +110,7 @@ window.addEventListener('load', function() {
     ostBroken = document.getElementById('navbarOSTBroke')
     if (ostCheck == 'true') {
         ostLogo.style.display = 'block'
-        if ((currentPage == '/messenger.html')||(currentPage == '/logone.html')||(currentPage == '/logtwo.html')||(currentPage == '/logthree.html')||(currentPage == '/logfour.html')) {
+        if ((currentPage == 'messenger.html')||(currentPage == 'logone.html')||(currentPage == 'logtwo.html')||(currentPage == 'logthree.html')||(currentPage == 'logfour.html')) {
             ostBroken.innerHTML = 'OST'
             ostBroken.href = 'soundtrack.html'
         } else {
@@ -119,7 +119,7 @@ window.addEventListener('load', function() {
         }
     } else {
         ostLogo.style.display = 'none'
-        if ((currentPage == '/messenger.html')||(currentPage == '/logone.html')||(currentPage == '/logtwo.html')||(currentPage == '/logthree.html')||(currentPage == '/logfour.html')) {
+        if ((currentPage == 'messenger.html')||(currentPage == 'logone.html')||(currentPage == 'logtwo.html')||(currentPage == 'logthree.html')||(currentPage == 'logfour.html')) {
             ostBroken.innerHTML = '???'
             ostBroken.href = 'encryption.html'
         } else {
@@ -131,7 +131,7 @@ window.addEventListener('load', function() {
 })
 
 window.addEventListener('load', function() {
-    if (currentPage == '/logone.html') {
+    if (currentPage == 'logone.html') {
         mysteriousLogsUnlocked = sessionStorage.getItem('mysteriousLogsUnlocked')
         if (mysteriousLogsUnlocked == 'true') {
             sessionStorage.setItem('log1Unlocked', true)
@@ -145,7 +145,7 @@ window.addEventListener('load', function() {
         }
     }
 
-    if (currentPage == '/logtwo.html') {
+    if (currentPage == 'logtwo.html') {
         mysteriousLogsUnlocked = sessionStorage.getItem('mysteriousLogsUnlocked')
         if (mysteriousLogsUnlocked == 'true') {
             sessionStorage.setItem('log2Unlocked', true)
@@ -159,7 +159,7 @@ window.addEventListener('load', function() {
         }
     }
 
-    if (currentPage == '/logthree.html') {
+    if (currentPage == 'logthree.html') {
         mysteriousLogsUnlocked = sessionStorage.getItem('mysteriousLogsUnlocked')
         if (mysteriousLogsUnlocked == 'true') {
             sessionStorage.setItem('log3Unlocked', true)
@@ -181,7 +181,7 @@ window.addEventListener('load', function() {
     mysteriousLogsBroken = document.getElementById('navbarMysteriousLogsBroke')
     if (mysteriousLogsCheck == 'true') {
         mysteriousLogsLogo.style.display = 'block'
-        if ((currentPage == '/messenger.html')||(currentPage == '/logone.html')||(currentPage == '/logtwo.html')||(currentPage == '/logthree.html')||(currentPage == '/logfour.html')) {
+        if ((currentPage == 'messenger.html')||(currentPage == 'logone.html')||(currentPage == 'logtwo.html')||(currentPage == 'logthree.html')||(currentPage == 'logfour.html')) {
             mysteriousLogsBroken.innerHTML = 'Logs'
             mysteriousLogsBroken.href = 'mysteriouslogs.html'
         } else {
@@ -190,7 +190,7 @@ window.addEventListener('load', function() {
         }
     } else {
         mysteriousLogsLogo.style.display = 'none'
-        if ((currentPage == '/messenger.html')||(currentPage == '/logone.html')||(currentPage == '/logtwo.html')||(currentPage == '/logthree.html')||(currentPage == '/logfour.html')) {
+        if ((currentPage == 'messenger.html')||(currentPage == 'logone.html')||(currentPage == 'logtwo.html')||(currentPage == 'logthree.html')||(currentPage == 'logfour.html')) {
             mysteriousLogsBroken.innerHTML = '???'
             mysteriousLogs.addEventListener('click', function() {
                 alert('Hmm...Nothing Happened')
@@ -205,7 +205,7 @@ window.addEventListener('load', function() {
     }
 })
 
-if (currentPage == '/index.html') {
+if (currentPage == 'home.html') {
     submitMessage = document.getElementById('deviceSubmitButton')
     submitMessage.addEventListener('click', function(e) {
         var y = document.forms['contactDevice']['Name'].value.toLowerCase();
@@ -214,7 +214,7 @@ if (currentPage == '/index.html') {
             if (y == 'renotech@gmail.com') {
                 y = document.forms['contactDevice']['Message'].value.toLowerCase();
                 if (y == 'evolution is the key to progression') {
-                    location.href='/logthree.html'
+                    location.href='logthree.html'
                     return true;
                 } else {
                     return false;
@@ -229,7 +229,7 @@ if (currentPage == '/index.html') {
 }
 
 window.addEventListener('load', function(e) {
-    if (currentPage == '/mysteriouslogs.html') {
+    if (currentPage == 'mysteriouslogs.html') {
         entryLog1 = document.getElementById('entryLog1')
         entryLog2 = document.getElementById('entryLog2')
         entryLog3 = document.getElementById('entryLog3')
@@ -240,21 +240,21 @@ window.addEventListener('load', function(e) {
         log4Status = sessionStorage.getItem('log4Unlocked')
         if (log1Status == 'true') {
             entryLog1.innerHTML = 'Entry Log 1'
-            entryLog1.href = '/logone.html'
+            entryLog1.href = 'logone.html'
         } else {
             return false
         }
         if (log2Status == 'true') {
             entryLog2.innerHTML = 'Entry Log 2'
-            entryLog2.href = '/logtwo.html'
+            entryLog2.href = 'logtwo.html'
         }
         if (log3Status == 'true') {
             entryLog3.innerHTML = 'Entry Log 3'
-            entryLog3.href = '/logthree.html'
+            entryLog3.href = 'logthree.html'
         }
         if (log4Status == 'true') {
             entryLog4.innerHTML = 'Entry Log 4'
-            entryLog4.href = '/logfour.html'
+            entryLog4.href = 'logfour.html'
         }
         if ((log1Status == 'true') && (log2Status == 'true') && (log3Status == 'true')) {
             theFinalPiece = document.getElementById('theFinalPiece')
@@ -266,7 +266,7 @@ window.addEventListener('load', function(e) {
 })
 
 window.addEventListener('load', function(e) {
-    if (currentPage == '/logfour.html') {
+    if (currentPage == 'logfour.html') {
         var achievementUnlockedList = sessionStorage.getItem('achievements');
         if (achievementUnlockedList.includes('Invoice')){
             return true

@@ -67,7 +67,7 @@ $(document).ready(function () {
           accountAchievements = JSON.parse(accountAchievements);
           console.log(accountAchievements);
           sessionStorage.setItem ('achievements', JSON.stringify(accountAchievements.achievements));
-          location.href = '/home.html'
+          location.href = 'home.html'
         });
       } else {
         var settings = {
@@ -95,7 +95,7 @@ $(document).ready(function () {
                 accountAchievements = JSON.parse(accountAchievements);
                 console.log(accountAchievements);
                 sessionStorage.setItem ('achievements', JSON.stringify(accountAchievements.achievements));
-                location.href = '/home.html'
+                location.href = 'home.html'
               } else {
                 console.log('no match')
                 var match = false

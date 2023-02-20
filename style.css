@@ -531,7 +531,7 @@ hr {
     margin-top: 20px;
     border-radius: 20px;
     padding: 20px 0;
-    background-image: url(assets/images/hologram.jpg);
+    background-image: url(Assets/images/hologram.jpg);
     background-size: 800px 800px;
 }
 
@@ -541,7 +541,7 @@ hr {
     margin-top: 20px;
     border-radius: 20px;
     padding: 20px 0;
-    background-image: url(assets/images/hologram.jpg);
+    background-image: url(Assets/images/hologram.jpg);
     background-size: 800px 680px;
 }
 
